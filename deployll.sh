@@ -2120,7 +2120,7 @@ if [[ $LOCAL_INSTALL == true ]] && [[ $UPDATE_MODE == false ]]; then
                 while true; do
                     output "please enter the organisation name"
                     read -r -s -n 1 n
-                    output_log "user entered '${e}'"
+                    output_log "user entered '${n}'"
                     if [[ $n == "" ]]; then
                         n="Example"
                         INSTALL_ORG=$n
@@ -2130,7 +2130,7 @@ if [[ $LOCAL_INSTALL == true ]] && [[ $UPDATE_MODE == false ]]; then
                 while true; do
                     output "please enter the email address for the administrator account"
                         read -r -s -n 1 n
-                    output_log "user entered '${e}'"
+                    output_log "user entered '${n}'"
                     if [[ $n == "" ]]; then
                         n="admin@example.org"
                         INSTALL_EMAIL=$n
