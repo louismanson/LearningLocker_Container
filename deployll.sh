@@ -2119,18 +2119,20 @@ if [[ $LOCAL_INSTALL == true ]] && [[ $UPDATE_MODE == false ]]; then
             if [[ $n == "y" ]]; then
                 while true; do
                     output "please enter the organisation name"
-                    e="Admin"
+                    read e
                     output_log "user entered '${e}'"
-                    if [[ $e != "" ]]; then
+                    if [[ $e == "" ]]; then
+                        e="Example"
                         INSTALL_ORG=$e
                         break
                     fi
                 done
                 while true; do
                     output "please enter the email address for the administrator account"
-                        e="admin@admin.net"
+                        read e
                     output_log "user entered '${e}'"
-                    if [[ $e != "" ]]; then
+                    if [[ $e == "" ]]; then
+                        e="admin@example.org"
                         INSTALL_EMAIL=$e
                         break
                     fi
@@ -2138,8 +2140,9 @@ if [[ $LOCAL_INSTALL == true ]] && [[ $UPDATE_MODE == false ]]; then
                 while true; do
                     while true; do
                         output "please enter the password for the administrator account"
-                        e="Example1."
-                        if [[ $e != "" ]]; then
+                        read -r -s e
+                        if [[ $e == "" ]]; then
+                            e="Example1."
                             INSTALL_PASSWD=$e
                             break
                         fi
