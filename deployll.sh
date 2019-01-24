@@ -2119,30 +2119,34 @@ if [[ $LOCAL_INSTALL == true ]] && [[ $UPDATE_MODE == false ]]; then
             if [[ $n == "y" ]]; then
                 while true; do
                     output "please enter the organisation name"
-                    e = 'Example'
-                    output_log "user entered '${e}'"
-                    if [[ $e != "" ]]; then
-                        INSTALL_ORG=$e
-                        break
-                    fi
+                    INSTALL_ORG='Example'
+                    break
+                    #output_log "user entered '${e}'"
+                    #if [[ $e != "" ]]; then
+                        #INSTALL_ORG=$e
+                        #break
+                    #fi
                 done
                 while true; do
                     output "please enter the email address for the administrator account"
-                        e = 'admin@admin.net'
-                    output_log "user entered '${e}'"
-                    if [[ $e != "" ]]; then
-                        INSTALL_EMAIL=$e
-                        break
-                    fi
+                    INSTALL_EMAIL= 'admin@admin.net'
+                    break
+                    #output_log "user entered '${e}'"
+                    #if [[ $e != "" ]]; then
+                        #INSTALL_EMAIL=$e
+                        #break
+                    #fi
                 done
                 while true; do
                     while true; do
                         output "please enter the password for the administrator account"
-                        e = 'Example1.'
-                        if [[ $e != "" ]]; then
-                            INSTALL_PASSWD=$e
-                            break
-                        fi
+                        #e = 'Example1.'
+                        INSTALL_PASSWD='Example1.'
+                        break
+                        #if [[ $e != "" ]]; then
+                            #INSTALL_PASSWD='Example1.'
+                            #break
+                        #fi
                     done
                     while true; do
                         output "please confirm the password for the administrator account"
