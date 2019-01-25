@@ -2170,7 +2170,7 @@ if [[ $LOCAL_INSTALL == true ]] && [[ $UPDATE_MODE == false ]]; then
                     output "  Email address : $INSTALL_EMAIL"
                     output "[y|n]"
                     read -r -s -n 1 e
-                    if [[ $e == "y" ]]; then
+                    if [[ $e == "" ]]; then
                         break;
                     elif [[ $e == "n" ]]; then
                         continue 2
